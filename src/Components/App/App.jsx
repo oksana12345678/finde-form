@@ -17,6 +17,7 @@ function App() {
       setLoading(true);
       setError(false);
       const data = await fetchArticlesWithTopic(topic);
+      console.log(data)
       setArticles(data);
     } catch (error) {
       setError(true);
