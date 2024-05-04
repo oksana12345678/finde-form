@@ -1,0 +1,11 @@
+.error {
+  color: rgb(255, 45, 45);
+  background-color: #ffe8e8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid red;
+  width: 260px;
+  padding: 16px;
+}

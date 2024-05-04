@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import css from "./SearchForm.module.css";
 
 const SearchForm = ({ onSearch }) => {
   const searchId = useId();
@@ -14,7 +15,7 @@ const SearchForm = ({ onSearch }) => {
     topic: Yup.string()
       .min(3, "Too Short!")
       .max(30, "Too Long!")
-      .required("Required"),
+      .required("Required!"),
   });
 
   return (
@@ -23,18 +24,27 @@ const SearchForm = ({ onSearch }) => {
       onSubmit={handleSubmit}
       initialValues={{ topic: "" }}
     >
-      <Form>
-        <div>
-          <label htmlFor={searchId}>Search</label>
+      <Form className={css.form}>
+        <div className={css.containerForm}>
+          <label className={css.formLabel} htmlFor={searchId}>
+            Search
+          </label>
           <Field
+            className={css.formField}
             id={searchId}
             type="text"
             name="topic"
             placeholder="Search articles..."
           />
-          <ErrorMessage name="topic" component="span" />
+          <ErrorMessage
+            className={css.errorMessage}
+            name="topic"
+            component="span"
+          />
         </div>
-        <button type="submit">Search</button>
+        <button className={css.buttonSubmit} type="submit">
+          Search
+        </button>
       </Form>
     </Formik>
   );

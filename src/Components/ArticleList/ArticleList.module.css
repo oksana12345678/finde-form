@@ -1,3 +1,13 @@
 .list {
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  list-style-type: circle;
+  gap: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: rgb(252, 251, 251);
+  width: 800px;
 }

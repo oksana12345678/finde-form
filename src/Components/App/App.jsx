@@ -5,6 +5,7 @@ import ArticlesList from "../ArticleList/ArticleList";
 import Loader from "../Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
 import Error from "../Error/Error";
+import "/node_modules/modern-normalize/modern-normalize.css";
 
 import SearchForm from "../SearchForm/SearchForm";
 function App() {
@@ -17,7 +18,6 @@ function App() {
       setLoading(true);
       setError(false);
       const data = await fetchArticlesWithTopic(topic);
-      console.log(data)
       setArticles(data);
     } catch (error) {
       setError(true);

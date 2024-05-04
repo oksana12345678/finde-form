@@ -1,14 +1,7 @@
-import { toast } from "react-toastify";
+import css from "./Error.module.css";
 
 const Error = () => {
-  toast.error("Sorry, something went wrong, try again later!", {
-    position: "top-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-  });
+  return <p className={css.error}>Woops, something went wrong!</p>;
 };
+
 export default Error;
